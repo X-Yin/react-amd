@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:component": "webpack --config webpack.config.component.js --watch",
+    "build:runtime": "webpack --config webpack.config.runtime.js --watch",
+    "start": "npm-run-all --parallel build:component build:runtime server",
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-async-to-generator": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "chalk": "^4.1.2",
+    "commander": "^8.1.0",
+    "css-loader": "^6.2.0",
+    "express": "^4.17.1",
+    "form-data": "^4.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "htmlparser": "^1.7.7",
+    "jquery": "^3.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "requirejs": "^2.3.6",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
